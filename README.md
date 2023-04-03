@@ -96,3 +96,36 @@ Every function if JavaScript is an object and it must have the `.call()` method.
 
 `function.bind(object)` to bind the function to the object and returns a new function. This is usually used to change the context of the `this` keyword.
 
+# Types in JavaScript
+
+Number, Boolean, String, undefined, null, Symbol,
+
+`typeof null === 'object'`
+
+Undefined is absence of definition. Null is absence of value
+
+Arrays and functions are objects underneath the hood.
+
+Primitive type (everything except 'object') represents a single value in memory. Non-primitive types don't include the value directly. It has a pointer to the value. Primitive typea re immutable.
+
+Primitive types have object reference. JavaScript comes with built-in objects like `Array`, `String`, `Number`.
+
+To check whether a variable is an array: `Array.isArray([1, 2, 3]) // returns true`.
+
+To clone a non-primitive type:
+
+- `const objectClone = Object.assign({}, obj);` shallow cloning
+- `const objectClone = { ...obj }` shallow cloning
+- `const superClone = JSON.parse(JSON.stringify(obj));` super cloning
+- `const arrayClone = [].concat();`
+
+## Type Coercion
+
+Type Coercion occurs when `==` instead of `===`. Type Coercion means trying to convert one type to another.
+
+## Dynamic types vs. Static types
+Static Typed languages are self-documented --> less bugs in production
+
+## Strongly typed vs. Weakly typed languages
+JavaScript is a dynamic and weakly-typed language because it has a lot of type coercion.
+
